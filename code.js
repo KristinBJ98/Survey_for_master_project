@@ -179,7 +179,7 @@ timeline.push(merInstruksjoner);
 // comments, like this
 
 var CueThoughtItems = [
-    {quest: 'Jeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
     {quest: 'Jeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
     {quest: 'Jeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
     {quest: 'Som føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
