@@ -180,13 +180,13 @@ timeline.push(merInstruksjoner);
 
 var CueThoughtItems = [
     {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
-    {quest: 'Jeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
-    {quest: 'Jeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
-    {quest: 'Som føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
-    {quest: 'Jeg ville trengt en påminnelse for å gjøre',                                         label: 'item05_Påminnelse',    reverse: 1, itemNo: 5 },
-    {quest: 'Som ikke er typisk “meg”',                                                           label: 'item06_IkkeTypisk',    reverse: 1, itemNo: 6 },
-    {quest: 'Jeg sjeldent gjør',                                                                  label: 'item07_Sjeldent',      reverse: 1, itemNo: 7 },
-    {quest: 'Jeg gjør hver dag',                                                                  label: 'item08_HverDag',       reverse: 0, itemNo: 8 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nSom føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg ville trengt en påminnelse for å gjøre',                                         label: 'item05_Påminnelse',    reverse: 1, itemNo: 5 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nSom ikke er typisk “meg”',                                                           label: 'item06_IkkeTypisk',    reverse: 1, itemNo: 6 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg sjeldent gjør',                                                                  label: 'item07_Sjeldent',      reverse: 1, itemNo: 7 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...\nJeg gjør hver dag',                                                                  label: 'item08_HverDag',       reverse: 0, itemNo: 8 },
 ]
 
 // After specifying such a list, we can access each item by the list numnber
