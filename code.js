@@ -179,14 +179,14 @@ timeline.push(merInstruksjoner);
 // comments, like this
 
 var CueThoughtItems = [
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Som føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg ville trengt en påminnelse for å gjøre',                                         label: 'item05_Påminnelse',    reverse: 1, itemNo: 5 },
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Som ikke er typisk “meg”',                                                           label: 'item06_IkkeTypisk',    reverse: 1, itemNo: 6 },
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg sjeldent gjør',                                                                  label: 'item07_Sjeldent',      reverse: 1, itemNo: 7 },
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br>Jeg gjør hver dag',                                                                  label: 'item08_HverDag',       reverse: 0, itemNo: 8 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Som føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg ville trengt en påminnelse for å gjøre',                                         label: 'item05_Påminnelse',    reverse: 1, itemNo: 5 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Som ikke er typisk “meg”',                                                           label: 'item06_IkkeTypisk',    reverse: 1, itemNo: 6 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>eg sjeldent gjør',                                                                  label: 'item07_Sjeldent',      reverse: 1, itemNo: 7 },
+    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg gjør hver dag',                                                                  label: 'item08_HverDag',       reverse: 0, itemNo: 8 },
 ]
 
 // After specifying such a list, we can access each item by the list numnber
