@@ -207,14 +207,14 @@ var CueThoughtItems = [
 // This tells the computer to repeat the block
 // 13 times and count through the list 1, 2, 3, etc.
 // One technical detail: such lists always start with 0, so 0 is the first item, 1 the second, etc.
-  // For each presentation, this gets replaced with the respective text of the item.
-  var x;
-  for (x = 0; x < 7; x++) {  
+// For each presentation, this gets replaced with the respective text of the item.
+var x;
+for (x = 0; x < 7; x++) {  
   
       
-    // And here we have more or less the same code as for the previous question
-    // But instead of presenting the question, we include "QuestItems[x].quest"
-    // For each presentation, this gets replaced with the respective text of the item.
+// And here we have more or less the same code as for the previous question
+// But instead of presenting the question, we include "QuestItems[x].quest"
+// For each presentation, this gets replaced with the respective text of the item.
     const CueThoughtPresentation = {
       type: jsPsychSurvey,
       button_label_finish: "Next",
@@ -369,27 +369,109 @@ var ConscItems = [
     timeline.push(VividPresentationOneToFour);
   }
 //-------------------------------------------------------------------------------------------------------------------
-var VividFireTilÅtte = {
+  var VividFemTilAAtte = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <p>For de neste 4 spørsmålene, ber vi deg om å visualiser en stigende sol. Vurder nøye bildet du ser for deg i sinnet ditt.</p>
+    `,
+    choices: ['Next'],
+    data: { stimulus : 'instructions' }
+  };
+  timeline.push(VividFemTilAAtte);
+//----------------------------------------------------------------------------------------------------------------------
+  var VividItemsFiveToEight = [
+    {quest: 'Solen stiger fra horisonten inn i en disig himmel',                                  label: 'item01_Stiger',         reverse: 0, itemNo: 1 },
+    {quest: 'Himmelen klarner og omringer solen med blått',                                       label: 'item02_Klarner',        reverse: 0, itemNo: 2 },
+    {quest: 'Skyer. En storm kommer og lyn slår fra himmelen',                                    label: 'item03_Storm',          reverse: 0, itemNo: 3 },  
+    {quest: 'En regnbue kommer til synet',                                                        label: 'item04_Regnbue',        reverse: 0, itemNo: 4 }, 
+  ]
+
+  var x;
+  for (x = 0; x < 3; x++) { 
+    const VividPresentationFiveToEight = {
+      type: jsPsychSurvey,
+      button_label_finish: "Next",
+      required_question_label: '',
+      pages: [
+        [
+          {
+            type: 'likert',
+            prompt: VividItemsFiveToEight[x].quest, 
+            likert_scale_min_label: 'Helt tydelig og klart, som vanlig syn',
+            likert_scale_max_label: 'Ingen bilde, du bare "vet" at du tenker på det',
+            required: true,
+            likert_scale_values: [ {value: 1}, {value: 2}, {value: 3}, {value: 4}, {value: 5} ]
+          }, 
+        ]
+      ],
+      data: { stimulus  : 'VividItemsFiveToEight' },
+      post_trial_gap: 250,
+    };
+
+    timeline.push(VividPresentationFiveToEight);
+  }
+//-------------------------------------------------------------------------------------------------------
+  var VividNiTilTolv = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <p>For de neste 4 spørsmålene ber vi deg om å tenke på en butikk du ofte drar til. Vurder nøye bildet du ser for deg i sinnet ditt.</p>
+    `,
+    choices: ['Next'],
+    data: { stimulus : 'instructions' }
+  };
+  timeline.push(VividNiTilTolv);
+//-------------------------------------------------------------------------------------------------------
+  var VividItemsNineToTwelve = [
+    {quest: 'Det helhetlige utseende av butikken fra motsatt side av veien',                                    label: 'item01_Utseende',         reverse: 0, itemNo: 1 },
+    {quest: 'En vindusutstilling inkludert farger, former og detaljer av de individuelle varene for salg',      label: 'item02_Utstilling',       reverse: 0, itemNo: 2 },
+    {quest: 'Du er nær inngangen. Fargene, formen, og detaljene av døren',                                      label: 'item03_Dør',              reverse: 0, itemNo: 3 },  
+    {quest: 'Du går inn i butikken og til disken. Ekspeditøren hjelper deg. Du betaler.',                       label: 'item04_Betaler',          reverse: 0, itemNo: 4 }, 
+  ]
+  
+  var x;
+  for (x = 0; x < 3; x++) { 
+    const VividPresentationNineToTwelve = {
+      type: jsPsychSurvey,
+      button_label_finish: "Next",
+      required_question_label: '',
+      pages: [
+        [
+          {
+            type: 'likert',
+            prompt: VividItemsNineToTwelve[x].quest, 
+            likert_scale_min_label: 'Helt tydelig og klart, som vanlig syn',
+            likert_scale_max_label: 'Ingen bilde, du bare "vet" at du tenker på det',
+            required: true,
+            likert_scale_values: [ {value: 1}, {value: 2}, {value: 3}, {value: 4}, {value: 5} ]
+          }, 
+        ]
+      ],
+      data: { stimulus  : 'VividItemsNineToTwelve' },
+      post_trial_gap: 250,
+    };
+    timeline.push(VividPresentationNineToTwelve);
+  }
+//--------------------------------------------------------------------------------------------------------------------
+var VividTrettenTilSeksten = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-  <p>For de neste 4 spørsmålene, visualiser en stigende sol.</p>
-  <p>Vurder nøye bildet du ser for deg i sinnet ditt.</p>
+  <p>Til slutt ber vi deg å tenke på et landskap som har trær, fjell og en innsjø. Vurder nøye bildet du ser for deg i sinnet ditt.</p>
   `,
   choices: ['Next'],
   data: { stimulus : 'instructions' }
 };
-timeline.push(VividFireTilÅtte);
-//----------------------------------------------------------------------------------------------------------------------
-var VividItemsFourToEight = [
-  {quest: 'Solen stiger fra horisonten inn i en disig himmel',                                  label: 'item01_Kontur',         reverse: 0, itemNo: 1 },
-  {quest: 'Himmelen klarner og omringer solen med blått',                                       label: 'item02_Karakteristikk', reverse: 0, itemNo: 2 },
-  {quest: 'Skyer. En storm kommer og lyn slår fra himmelen',                                    label: 'item03_Gange',          reverse: 0, itemNo: 3 },  
-  {quest: 'En regnbue kommer til synet',                                                        label: 'item04_Farger',         reverse: 0, itemNo: 4 }, 
+timeline.push(VividTrettenTilSeksten);
+//--------------------------------------------------------------------------------------------------------------------
+var VividItemsThirteenToSixteen = [
+  {quest: 'Konturene av landskapet',                                          label: 'item01_Konturer',         reverse: 0, itemNo: 1 },
+  {quest: 'Fargene og formene på trærne',                                     label: 'item02_Trær',             reverse: 0, itemNo: 2 },
+  {quest: 'Fargen og formen på innsjøen',                                     label: 'item03_Innsjø',           reverse: 0, itemNo: 3 },  
+  {quest: 'En sterk bris blåser på trærne og innsjøen og skaper bølger',      label: 'item04_Bris',             reverse: 0, itemNo: 4 }, 
 ]
 
 var x;
 for (x = 0; x < 3; x++) { 
-  const VividPresentationFourToEight = {
+  const VividPresentationThirteenToSixteen = {
     type: jsPsychSurvey,
     button_label_finish: "Next",
     required_question_label: '',
@@ -397,7 +479,7 @@ for (x = 0; x < 3; x++) {
       [
         {
           type: 'likert',
-          prompt: VividItemsFourToEight[x].quest, 
+          prompt: VividItemsThirteenToSixteen[x].quest, 
           likert_scale_min_label: 'Helt tydelig og klart, som vanlig syn',
           likert_scale_max_label: 'Ingen bilde, du bare "vet" at du tenker på det',
           required: true,
@@ -405,12 +487,11 @@ for (x = 0; x < 3; x++) {
         }, 
       ]
     ],
-    data: { stimulus  : 'VividItemsFourToEight' },
+    data: { stimulus  : 'VividItemsThirteenToSixteen' },
     post_trial_gap: 250,
   };
-
-  timeline.push(VividPresentationFourToEight);
-
+  timeline.push(VividPresentationThirteenToSixteen);
+}
 
 // And finally, here is some code for the end
 // to ask demographic questions. It uses the
