@@ -368,7 +368,48 @@ var ConscItems = [
   
     timeline.push(VividPresentationOneToFour);
   }
+//-------------------------------------------------------------------------------------------------------------------
+var VividFireTilÅtte = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+  <p>For de neste 4 spørsmålene, visualiser en stigende sol.</p>
+  <p>Vurder nøye bildet du ser for deg i sinnet ditt.</p>
+  `,
+  choices: ['Next'],
+  data: { stimulus : 'instructions' }
+};
+timeline.push(VividFireTilÅtte);
+//----------------------------------------------------------------------------------------------------------------------
+var VividItemsFourToEight = [
+  {quest: 'Solen stiger fra horisonten inn i en disig himmel',                                  label: 'item01_Kontur',         reverse: 0, itemNo: 1 },
+  {quest: 'Himmelen klarner og omringer solen med blått',                                       label: 'item02_Karakteristikk', reverse: 0, itemNo: 2 },
+  {quest: 'Skyer. En storm kommer og lyn slår fra himmelen',                                    label: 'item03_Gange',          reverse: 0, itemNo: 3 },  
+  {quest: 'En regnbue kommer til synet',                                                        label: 'item04_Farger',         reverse: 0, itemNo: 4 }, 
+]
 
+var x;
+for (x = 0; x < 3; x++) { 
+  const VividPresentationFourToEight = {
+    type: jsPsychSurvey,
+    button_label_finish: "Next",
+    required_question_label: '',
+    pages: [
+      [
+        {
+          type: 'likert',
+          prompt: VividItemsFourToEight[x].quest, 
+          likert_scale_min_label: 'Helt tydelig og klart, som vanlig syn',
+          likert_scale_max_label: 'Ingen bilde, du bare "vet" at du tenker på det',
+          required: true,
+          likert_scale_values: [ {value: 1}, {value: 2}, {value: 3}, {value: 4}, {value: 5} ]
+        }, 
+      ]
+    ],
+    data: { stimulus  : 'VividItemsFourToEight' },
+    post_trial_gap: 250,
+  };
+
+  timeline.push(VividPresentationFourToEight);
 
 
 // And finally, here is some code for the end
