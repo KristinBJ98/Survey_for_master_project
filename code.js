@@ -340,8 +340,8 @@ var ConscItems = [
   var VividItemsOneToFour = [
     {quest: 'Den spesifikke konturen av annsikt, hodet, og kropp',                                label: 'item01_Kontur',         reverse: 0, itemNo: 1 },
     {quest: 'Karakteristisk stilling av hodet, posering av kroppen, og liknende',                 label: 'item02_Karakteristikk', reverse: 0, itemNo: 2 },
-    {quest: 'Den presise gangen, steglengde og liknende, ved gange',                              label: 'item03_Gange',          reverse: 0, itemNo: 3 },  
-    {quest: 'Fargene i noen kjente klesplagg mye brukt',                                          label: 'item04_Farger',         reverse: 0, itemNo: 4 }, 
+    {quest: 'Den presise gangen, steglengde og liknende ved gange',                               label: 'item03_Gange',          reverse: 0, itemNo: 3 },  
+    {quest: 'Fargene i noen kjente klesplagg som er mye brukt',                                   label: 'item04_Farger',         reverse: 0, itemNo: 4 }, 
   ]
   
   var x;
@@ -353,14 +353,16 @@ var ConscItems = [
       pages: [
         [
           {
-            type: 'multiple-choice',
-            prompt: VividItemsOneToFour[x].quest,            
-            options: ['Helt klart og så detaljert som vanlig syn', 'Klart og nokså detaljert', 'Vagt og dempet', 'Ingen bilde I det hele tatt, du bare ‘’vet’’ at du tenker på objektet'], 
-            required: true
+            type: 'likert',
+            prompt: VividItemsOneToFour[x].quest, 
+            likert_scale_min_label: 'Helt tydelig og klart, som vanlig syn',
+            likert_scale_max_label: 'Ingen bilde, du bare "vet" at du tenker på det',
+            required: true,
+            likert_scale_values: [ {value: 1}, {value: 2}, {value: 3}, {value: 4}, {value: 5} ]
           }, 
         ]
       ],
-      data: { stimulus  : 'Vivid-en-til-fire' },
+      data: { stimulus  : 'VividItemsOneToFour' },
       post_trial_gap: 250,
     };
   
