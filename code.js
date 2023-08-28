@@ -492,6 +492,222 @@ for (x = 0; x < 3; x++) {
   };
   timeline.push(VividPresentationThirteenToSixteen);
 }
+//---------------------------------------------------------------------------------------------------------------------
+var DaydreamingInstruksjoner = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+  <p>Den siste blokken med spørsmål vil handle om hvor ofte tankene dine vandrer fra det du holder på med, også kalt dagdrømming</p>
+  <p>Vennligst indiker hvor mye du er enig eller uenig med følgene utsagn.</p>
+  `,
+  choices: ['Next'],
+  data: { stimulus : 'instructions' }
+};
+timeline.push(DaydreamingInstruksjoner);
+//--------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+var DaydreamingFrequencyQuestOne = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Jeg dagdrømmer...", 
+      labels: [
+        "Sjeldent", 
+        "En gang i uken", 
+        "En gang om dagen", 
+        "Noen ganger om dagen", 
+        "Flere ganger om dagen"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestOne);
+//-------------------------------------------------------
+var DaydreamingFrequencyQuestTwo = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Dagdrømming og fantasier okkuperer...", 
+      labels: [
+        "0% av tankene mine i løpet av en dag", 
+        "Mindre enn 10% av tankene mine i løpet av en dag", 
+        "Minst 10% av tankene mine i løpet av en dag", 
+        "Minst 25% av tankene mine i løpet av en dag", 
+        "Minst 50% av tankene mine i løpet av en dag"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestTwo);
+//---------------------------------------------------------
+var DaydreamingFrequencyQuestThree = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Når det kommer til dagdrømming, ser jeg på meg selv som en person som...", 
+      labels: [
+        "Aldri dagdrømmer", 
+        "Sjeldent dagdrømmer", 
+        "Dagrømmer av og til", 
+        "Dagrømmer moderat", 
+        "Er en inbitt dagrømmer"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestThree);
+//----------------------------------------------------------
+var DaydreamingFrequencyQuestFour = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Jeg minnes eller tenker på dagdrømmene mine...", 
+      labels: [
+        "Sjeldent", 
+        "En gang i uken", 
+        "En gang om dagen", 
+        "Noen ganger om dagen", 
+        "Flere ganger om dagen"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestFour);
+//-----------------------------------------------------------
+var DaydreamingFrequencyQuestFive = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Når jeg ikke har oppmerksomheten min rettet mot en jobb, bok, eller TV, pleier jeg å dagdrømme...", 
+      labels: [
+        "0% av tiden", 
+        "10% av tiden", 
+        "25% av tiden", 
+        "50% av tiden", 
+        "75% av tiden"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestFive);
+//----------------------------------------------------------
+var DaydreamingFrequencyQuestSix = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "I stedet for å legge merke til hendelser og personer rundt meg, pleier jeg å bruke...", 
+      labels: [
+        "0% av tiden i tankene mine", 
+        "Mindre enn 10% av tiden i tankene mine", 
+        "Minst 10% av tiden i tankene mine" ,
+        "Minst 25% av tiden i tankene mine", 
+        "Minst 50% av tiden i tankene mine"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestSix);
+//----------------------------------------------------------
+var DaydreamingFrequencyQuestSeven = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Jeg dagdrømmer på jobb eller på skolen...", 
+      labels: [
+        "Sjeldent", 
+        "En gang i uken", 
+        "En gang om dagen", 
+        "Noen ganger om dagen", 
+        "Flere ganger om dagen"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestSeven);
+//-----------------------------------------------------------
+var DaydreamingFrequencyQuestEight = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Å minnes ting fra fortiden, tenke på fremtiden, eller å forestille seg uvanlige scenarioer okkuperer...", 
+      labels: [
+        "0% av tankene mine i løpet av en dag", 
+        "Mindre enn 10% av tankene mine i løpet av en dag", 
+        "Minst 10% av tankene mine i løpet av en dag", 
+        "Minst 25% av tankene mine i løpet av en dag", 
+        "Minst 50% av tankene mine i løpet av en dag"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestEight);
+//-------------------------------------------------------------
+var DaydreamingFrequencyQuestNine = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Jeg glemmer meg bort i aktiv dagdrømming...", 
+      labels: [
+        "Sjeldent", 
+        "En gang i uken", 
+        "En gang om dagen", 
+        "Noen ganger om dagen", 
+        "Flere ganger om dagen"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestNine);
+//--------------------------------------------------------------
+var DaydreamingFrequencyQuestTen = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Når jeg har ledig tid, dagdrømmer jeg...", 
+      labels: [
+        "Aldri", 
+        "Sjeldent", 
+        "Noen ganger", 
+        "Ofte", 
+        "Alltid"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestTen);
+//-------------------------------------------------------------
+var DaydreamingFrequencyQuestElleven = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "Når jeg er i et møte eller på en forestilling som ikke er veldig interresant, dagdrømmer jeg i stedet for å følge med...", 
+      labels: [
+        "Aldri", 
+        "Sjeldent", 
+        "Noen ganger", 
+        "Ofte", 
+        "Alltid"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestElleven);
+//-------------------------------------------------------------
+var DaydreamingFrequencyQuestTwelve = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {
+      prompt: "På en lang buss, tog eller flytur, dagdrømmer jeg...", 
+      labels: [
+        "Aldri", 
+        "Sjeldent", 
+        "Noen ganger", 
+        "Ofte", 
+        "Mesteparten av tiden"
+      ]
+    }
+  ]
+};
+timeline.push(DaydreamingFrequencyQuestTwelve);
 
 // And finally, here is some code for the end
 // to ask demographic questions. It uses the
