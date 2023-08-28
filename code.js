@@ -85,9 +85,6 @@ let birthYear = "";
 // This just has to be here at the start. Creates the timeline variable
 var timeline = [];
 
-
-
-
 // -----------------------------------------------------------------------------------------
 // This is an example how to present instructions
 // including a "continue" button.
@@ -115,6 +112,20 @@ var Velkommen = {
 timeline.push(Velkommen);
 // -----------------------------------------------------------------------------------------
 // Consent Page
+// sample function that might be used to check if a participant has given // consent to participate. 
+var check_consent = function(elem) { 
+  if (document.getElementById('consent_checkbox').checked) { return true; } 
+  else { alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'"); return false; } 
+  return false; };
+
+// declare the block. 
+var consent = { 
+  type: jsPsychExternalHtml, 
+  url: "consent.html", 
+  cont_btn: "start", 
+  check_fn: check_consent };
+
+
 var Samtykke = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
@@ -132,7 +143,6 @@ var Samtykke = {
   data: { stimulus: 'Samtykke' }
 };
 
-timeline.push(Samtykke);
 
 // -----------------------------------------------------------------------------------------
 // Another instruction block - works exactly the same way as the previous one.
@@ -179,7 +189,8 @@ timeline.push(merInstruksjoner);
 // comments, like this
 
 var CueThoughtItems = [
-    {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg ville hatt vansker med å gjøre',                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
+    {quest: function(){
+      return "Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe..."<br>"Jeg ville hatt vansker med å gjøre"},                                                 label: 'item01_Vansker',       reverse: 1, itemNo: 1 },
     {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg starter å gjøre før jeg legger merke til at jeg gjør det',                       label: 'item02_StarterFør',    reverse: 0, itemNo: 2 },
     {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Jeg har gjort lenge',                                                                label: 'item03_GjortLenge',    reverse: 0, itemNo: 3 },  
     {quest: 'Å tenke på spesifikke situasjoner når jeg tenker på fremtidige handlinger er noe...<br><br>Som føles nesten naturlig ut for meg',                                               label: 'item04_FølesNaturlig', reverse: 0, itemNo: 4 }, 
@@ -708,6 +719,7 @@ var DaydreamingFrequencyQuestTwelve = {
   ]
 };
 timeline.push(DaydreamingFrequencyQuestTwelve);
+//---------------------------------------------------------
 
 // And finally, here is some code for the end
 // to ask demographic questions. It uses the
@@ -759,6 +771,8 @@ var demographics = {
     }
 };
 timeline.push(demographics);
+//-----------------------------------------------------------------------------------------
+
 
 
 
